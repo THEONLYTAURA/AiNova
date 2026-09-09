@@ -15,7 +15,7 @@ from question_bank import QUESTIONS
 from scoring import composite_score, level_for_score, prompt_improvement_rate
 from schemas import *
 
-MAX_PROMPT = int(os.getenv("MAX_PROMPT_CHARS", "400"))
+MAX_PROMPT = int(os.getenv("MAX_PROMPT_CHARS", "4000"))
 limiter = Limiter(key_func=get_remote_address)
 app = FastAPI(title="PromptForge API", version="0.2.0", description="PromptForge R0 AI-skills platform")
 app.state.limiter = limiter
