@@ -9,7 +9,7 @@ from slowapi import Limiter, _rate_limit_exceeded_handler
 from slowapi.errors import RateLimitExceeded
 from slowapi.util import get_remote_address
 
-import db
+from . import db
 from evaluation import evaluate_prompt
 from question_bank import QUESTIONS
 from scoring import composite_score, level_for_score, prompt_improvement_rate
